@@ -1,0 +1,363 @@
+[gd_scene load_steps=126 format=2]
+
+[ext_resource path="res://audio/format wav/Run/Run_v2.wav" type="AudioStream" id=1]
+[ext_resource path="res://audio/format wav/Jump/Landing_2.wav" type="AudioStream" id=2]
+[ext_resource path="res://audio/format wav/Jump/Up_v2.wav" type="AudioStream" id=3]
+[ext_resource path="res://audio/format wav/Dash_v1.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile009.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile011.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile003.png" type="Texture" id=7]
+[ext_resource path="res://Fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Scripts/Player_life_bar.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/AmmoLabelCounter.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=11]
+[ext_resource path="res://Scripts/TextureRect.gd" type="Script" id=12]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile016.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile004.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile005.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile034.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/attack/main-character@attack-sheet6.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile012.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile023.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile030.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/attack/main-character@attack-sheet4.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile033.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile013.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile010.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile035.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile008.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile028.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile032.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/attack/main-character@attack-sheet3.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile006.png" type="Texture" id=30]
+[ext_resource path="res://audio/player/Wall/Wall jump 2 - ZOOM0013_Tr1.wav" type="AudioStream" id=31]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile020.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile017.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile019.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile025.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile014.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile011.png" type="Texture" id=37]
+[ext_resource path="res://audio/player/Wall/Wall slide - ZOOM0013_Tr1.wav" type="AudioStream" id=38]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/attack/main-character@attack-sheet5.png" type="Texture" id=39]
+[ext_resource path="res://audio/player/health/Health up - smpl0011.wav" type="AudioStream" id=40]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile018.png" type="Texture" id=41]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile026.png" type="Texture" id=42]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/jump/tile008.png" type="Texture" id=43]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/dash/tile015.png" type="Texture" id=44]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/dash/tile018.png" type="Texture" id=45]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile006.png" type="Texture" id=46]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile022.png" type="Texture" id=47]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/hurt/tile002.png" type="Texture" id=48]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile000.png" type="Texture" id=49]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile023.png" type="Texture" id=50]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/jump/tile005.png" type="Texture" id=51]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/run/tile007.png" type="Texture" id=52]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/hurt/tile004.png" type="Texture" id=53]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/hurt/tile000.png" type="Texture" id=54]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/wall_jump/tile001.png" type="Texture" id=55]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/jump/tile006.png" type="Texture" id=56]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/jump/tile007.png" type="Texture" id=57]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/wall_jump/tile005.png" type="Texture" id=58]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/hurt/tile005.png" type="Texture" id=59]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/dash/tile017.png" type="Texture" id=60]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/run/tile003.png" type="Texture" id=61]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile013.png" type="Texture" id=62]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile007.png" type="Texture" id=63]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile002.png" type="Texture" id=64]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile015.png" type="Texture" id=65]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/run/tile000.png" type="Texture" id=66]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/wall_jump/tile000.png" type="Texture" id=67]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/run/tile008.png" type="Texture" id=68]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/run/tile009.png" type="Texture" id=69]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile001.png" type="Texture" id=70]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/run/tile005.png" type="Texture" id=71]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile008.png" type="Texture" id=72]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile010.png" type="Texture" id=73]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/run/tile006.png" type="Texture" id=74]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/dash/tile014.png" type="Texture" id=75]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile018.png" type="Texture" id=76]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/hurt/tile007.png" type="Texture" id=77]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile004.png" type="Texture" id=78]
+[ext_resource path="res://Sprites/Background/Sky.png" type="Texture" id=79]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile020.png" type="Texture" id=80]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile021.png" type="Texture" id=81]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/jump/tile004.png" type="Texture" id=82]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/run/tile002.png" type="Texture" id=83]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/jump/tile010.png" type="Texture" id=84]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/jump/tile009.png" type="Texture" id=85]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/wall_jump/tile002.png" type="Texture" id=86]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/run/tile001.png" type="Texture" id=87]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile016.png" type="Texture" id=88]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile019.png" type="Texture" id=89]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile021.png" type="Texture" id=90]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/hurt/tile001.png" type="Texture" id=91]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/wall_jump/tile004.png" type="Texture" id=92]
+[ext_resource path="res://Sprites/life_bar/progress.png" type="Texture" id=93]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/run/tile004.png" type="Texture" id=94]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile012.png" type="Texture" id=95]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/wall_jump/tile003.png" type="Texture" id=96]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile014.png" type="Texture" id=97]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/hurt/tile003.png" type="Texture" id=98]
+[ext_resource path="res://Sprites/life_bar/over.png" type="Texture" id=99]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile005.png" type="Texture" id=100]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/hurt/tile006.png" type="Texture" id=101]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/dash/tile013.png" type="Texture" id=102]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/dash/tile016.png" type="Texture" id=103]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/dash/tile012.png" type="Texture" id=104]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/stand_by/tile017.png" type="Texture" id=105]
+[ext_resource path="res://Sprites/life_bar/life_bar_under_2.png" type="Texture" id=106]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile003.png" type="Texture" id=107]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/empty.png" type="Texture" id=108]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile007.png" type="Texture" id=109]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/dash/tile011.png" type="Texture" id=110]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile031.png" type="Texture" id=111]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile001.png" type="Texture" id=112]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile009.png" type="Texture" id=113]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile029.png" type="Texture" id=114]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile024.png" type="Texture" id=115]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile002.png" type="Texture" id=116]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile027.png" type="Texture" id=117]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile022.png" type="Texture" id=118]
+[ext_resource path="res://Sprites/temp_player_and_enemy/player/death/tile015.png" type="Texture" id=119]
+[ext_resource path="res://Scenes/Pause_menu.tscn" type="PackedScene" id=120]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12, 12.055 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 112 ), ExtResource( 116 ), ExtResource( 107 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 30 ), ExtResource( 109 ), ExtResource( 26 ), ExtResource( 113 ), ExtResource( 24 ), ExtResource( 37 ), ExtResource( 18 ), ExtResource( 23 ), ExtResource( 36 ), ExtResource( 119 ), ExtResource( 13 ), ExtResource( 33 ), ExtResource( 41 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 81 ), ExtResource( 118 ), ExtResource( 19 ), ExtResource( 115 ), ExtResource( 35 ), ExtResource( 42 ), ExtResource( 117 ), ExtResource( 27 ), ExtResource( 114 ), ExtResource( 20 ), ExtResource( 111 ), ExtResource( 28 ), ExtResource( 22 ), ExtResource( 16 ), ExtResource( 25 ), ExtResource( 108 ) ],
+"loop": false,
+"name": "dead",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 110 ), ExtResource( 104 ), ExtResource( 102 ), ExtResource( 75 ), ExtResource( 44 ), ExtResource( 103 ), ExtResource( 60 ), ExtResource( 45 ) ],
+"loop": true,
+"name": "dash",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 67 ), ExtResource( 55 ), ExtResource( 86 ), ExtResource( 96 ), ExtResource( 92 ), ExtResource( 58 ) ],
+"loop": true,
+"name": "wall_jump",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 43 ), ExtResource( 85 ), ExtResource( 84 ) ],
+"loop": true,
+"name": "fall_test",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 21 ), ExtResource( 39 ), ExtResource( 17 ) ],
+"loop": false,
+"name": "atk",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 54 ), ExtResource( 91 ), ExtResource( 48 ), ExtResource( 98 ), ExtResource( 53 ), ExtResource( 59 ), ExtResource( 101 ), ExtResource( 77 ) ],
+"loop": false,
+"name": "damage_taken",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 49 ), ExtResource( 70 ), ExtResource( 64 ), ExtResource( 7 ), ExtResource( 78 ), ExtResource( 100 ), ExtResource( 46 ), ExtResource( 63 ), ExtResource( 72 ), ExtResource( 5 ), ExtResource( 73 ), ExtResource( 6 ), ExtResource( 95 ), ExtResource( 62 ), ExtResource( 97 ), ExtResource( 65 ), ExtResource( 88 ), ExtResource( 105 ), ExtResource( 76 ), ExtResource( 89 ), ExtResource( 80 ), ExtResource( 90 ), ExtResource( 47 ), ExtResource( 50 ) ],
+"loop": true,
+"name": "stand_by_test",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 82 ), ExtResource( 51 ), ExtResource( 56 ), ExtResource( 57 ) ],
+"loop": false,
+"name": "jump_test",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 66 ), ExtResource( 87 ), ExtResource( 83 ), ExtResource( 61 ), ExtResource( 94 ), ExtResource( 71 ), ExtResource( 74 ), ExtResource( 52 ), ExtResource( 68 ), ExtResource( 69 ) ],
+"loop": true,
+"name": "run_test",
+"speed": 15.0
+} ]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 0.533333 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 0.533333 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 17
+font_data = ExtResource( 8 )
+
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 13
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.970245, -19.9821 )
+frames = SubResource( 2 )
+animation = "atk"
+frame = 3
+
+[node name="Wall_jump_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 31 )
+
+[node name="Health_up_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 40 )
+
+[node name="Wall_sliding_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 38 )
+
+[node name="jump_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
+
+[node name="landing_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -25.0
+
+[node name="running_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -5.0
+
+[node name="dash_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -20.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0.131523, 0.103497 )
+offset = Vector2( 0, -70 )
+current = true
+smoothing_enabled = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -5
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.1, 0.1 )
+motion_mirroring = Vector2( 640, 640 )
+
+[node name="Sky" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 79 )
+centered = false
+
+[node name="ray_right_up" type="RayCast2D" parent="."]
+position = Vector2( -6.57439, -7.73317 )
+enabled = true
+cast_to = Vector2( 20, 0 )
+
+[node name="ray_right_down" type="RayCast2D" parent="."]
+position = Vector2( -6.57439, 4.26683 )
+enabled = true
+cast_to = Vector2( 20, 0 )
+
+[node name="ray_left_up" type="RayCast2D" parent="."]
+position = Vector2( 4.96271, -7.73287 )
+enabled = true
+cast_to = Vector2( -20, 0 )
+
+[node name="ray_left_down" type="RayCast2D" parent="."]
+position = Vector2( 4.99971, 4.14313 )
+enabled = true
+cast_to = Vector2( -20, 0 )
+
+[node name="Dash_Timer" type="Timer" parent="."]
+
+[node name="Invulnerability_Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Movement_Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="Dead_timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="Fire_rate_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 22.0139, -1.33484 )
+__meta__ = {
+"_gizmo_extents_": 5.0
+}
+
+[node name="HUD" type="CanvasLayer" parent="."]
+layer = 20
+
+[node name="Player_life_bar" type="TextureProgress" parent="HUD"]
+margin_left = 15.0
+margin_top = 10.0
+margin_right = 202.0
+margin_bottom = 32.0
+texture_under = ExtResource( 106 )
+texture_over = ExtResource( 99 )
+texture_progress = ExtResource( 93 )
+tint_progress = Color( 0.329412, 0.976471, 0, 1 )
+nine_patch_stretch = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="HUD"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -90.9999
+margin_top = 10.0
+margin_right = -14.9999
+margin_bottom = 61.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="AmmoType" type="TextureRect" parent="HUD/Panel"]
+margin_left = 5.24402
+margin_top = -7.49153
+margin_right = 81.244
+margin_bottom = 56.5085
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="HUD"]
+margin_left = 630.537
+margin_top = 10.0191
+margin_right = 670.537
+margin_bottom = 61.0191
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AmmoLabelCounter" type="Label" parent="HUD/Panel2"]
+margin_left = 1.0
+margin_right = 43.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 5 )
+text = "##"
+align = 1
+valign = 1
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause_menu" parent="." instance=ExtResource( 120 )]
+
+[connection signal="ammo_update" from="." to="HUD/Panel2/AmmoLabelCounter" method="_on_Player_ammo_update"]
+[connection signal="health_updated" from="." to="HUD/Player_life_bar" method="_on_Player_health_updated"]
+[connection signal="weapon_changed" from="." to="HUD/Panel/AmmoType" method="_on_Player_weapon_changed"]
+[connection signal="weapon_changed" from="." to="." method="_on_Player_weapon_changed"]
+[connection signal="animation_finished" from="Sprite" to="." method="_on_Sprite_animation_finished"]
+[connection signal="timeout" from="Dash_Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Invulnerability_Timer" to="." method="_on_Invulnerability_Timer_timeout"]
+[connection signal="timeout" from="Movement_Timer" to="." method="_on_Movement_Timer_timeout"]
+[connection signal="timeout" from="Dead_timer" to="." method="_on_Dead_timer_timeout"]

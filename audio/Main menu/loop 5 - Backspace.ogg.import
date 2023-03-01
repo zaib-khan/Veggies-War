@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/loop 5 - Backspace.ogg-a73c2397a763dc985f4d75bba9657ae8.oggstr"
+
+[deps]
+
+source_file="res://audio/Main menu/loop 5 - Backspace.ogg"
+dest_files=[ "res://.import/loop 5 - Backspace.ogg-a73c2397a763dc985f4d75bba9657ae8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

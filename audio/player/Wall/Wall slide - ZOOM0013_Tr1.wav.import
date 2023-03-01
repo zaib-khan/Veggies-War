@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Wall slide - ZOOM0013_Tr1.wav-ac7a3f10d50e40d376d2b1e07f95d1e7.sample"
+
+[deps]
+
+source_file="res://audio/player/Wall/Wall slide - ZOOM0013_Tr1.wav"
+dest_files=[ "res://.import/Wall slide - ZOOM0013_Tr1.wav-ac7a3f10d50e40d376d2b1e07f95d1e7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

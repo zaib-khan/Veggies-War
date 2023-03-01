@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Wall jump 2 - ZOOM0013_Tr1.wav-d15a9340cc12be3de2d26640c761f3fe.sample"
+
+[deps]
+
+source_file="res://audio/player/Wall/Wall jump 2 - ZOOM0013_Tr1.wav"
+dest_files=[ "res://.import/Wall jump 2 - ZOOM0013_Tr1.wav-d15a9340cc12be3de2d26640c761f3fe.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

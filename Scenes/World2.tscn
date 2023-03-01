@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://autoTile.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Téléporteur.tscn" type="PackedScene" id=3]
+[ext_resource path="res://audio/game music/Game music 1.wav" type="AudioStream" id=4]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Background_music_player.tscn" type="PackedScene" id=7]
+
+[node name="World2" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 32, 480 )
+
+[node name="Area2D2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1056, 96 )
+next_world = "res://Scenes/World4.tscn"
+player_spawn_location = Vector2( 96, 1184 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( -1, 1, 6, -65536, 1, 196609, -65535, 1, 196609, -65534, 1, 196609, -65533, 1, 196609, -65532, 1, 196609, -65531, 1, 196609, -65530, 1, 196609, -65529, 1, 196609, -65528, 1, 196609, -65527, 1, 196609, -65526, 1, 196609, -65525, 1, 196609, -65524, 1, 196609, -65523, 1, 196609, -65522, 1, 196609, -65521, 1, 131076, -65520, 1, 196609, -65519, 1, 196609, -65518, 1, 196609, -65517, 1, 7, 65535, 1, 65541, 15, 1, 65541, 19, 1, 65541, 131071, 1, 65541, 65551, 1, 65541, 65555, 1, 65541, 196607, 1, 65541, 131087, 1, 131075, 131088, 1, 196610, 131091, 1, 65541, 262143, 1, 65541, 196618, 1, 196613, 196620, 1, 5, 196623, 1, 65541, 196627, 1, 65541, 327679, 1, 65541, 262152, 1, 196613, 262156, 1, 65541, 262159, 1, 65541, 262163, 1, 65541, 393215, 1, 65541, 327686, 1, 196613, 327692, 1, 65541, 327695, 1, 131077, 327699, 1, 65541, 458751, 1, 65541, 393220, 1, 196613, 393228, 1, 65541, 393235, 1, 65541, 524287, 1, 65541, 458764, 1, 65541, 458771, 1, 65541, 589823, 1, 65542, 524288, 1, 196609, 524289, 1, 196609, 524290, 1, 196609, 524291, 1, 196609, 524292, 1, 196609, 524293, 1, 196609, 524294, 1, 196609, 524295, 1, 196609, 524296, 1, 196609, 524297, 1, 196609, 524298, 1, 196609, 524299, 1, 196609, 524300, 1, 196611, 524301, 1, 196609, 524302, 1, 196609, 524303, 1, 196609, 524304, 1, 196609, 524305, 1, 196609, 524306, 1, 196609, 524307, 1, 65543 )
+
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 608, 480 )
+
+[node name="Spawner" parent="." instance=ExtResource( 6 )]
+position = Vector2( 32, 480 )
+
+[node name="Spawner2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 800, 160 )
+
+[node name="Background_music_player" parent="." instance=ExtResource( 7 )]
+stream = ExtResource( 4 )
+autoplay = true
